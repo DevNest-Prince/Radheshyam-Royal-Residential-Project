@@ -8,7 +8,7 @@ function AboutPage() {
       {/* Page Hero Banner */}
       <div className="relative h-72 md:h-96 w-full overflow-hidden">
         <img
-          src="/hero/RR_15.jpg"
+          src="/RR_15.jpg"
           alt="Radheshyam Royal"
           className="w-full h-full object-cover"
         />
