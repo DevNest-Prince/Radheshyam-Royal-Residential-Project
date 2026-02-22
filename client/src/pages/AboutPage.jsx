@@ -1,18 +1,28 @@
 import React from 'react';
+import LocationSection from '../components/sections/LocationSection';
 
 function AboutPage() {
   return (
     <div className="min-h-screen pt-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            About <span className="text-amber-600">Radheshyam Royal</span>
+
+      {/* Page Hero Banner */}
+      <div className="relative h-72 md:h-96 w-full overflow-hidden">
+        <img
+          src="/hero/RR_15.jpg"
+          alt="Radheshyam Royal"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/55 flex flex-col items-center justify-center text-center px-4">
+          <p className="text-xs uppercase tracking-widest text-yellow-400 font-semibold mb-3">Navi Mumbai</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
+            About <span className="text-yellow-400">Radheshyam Royal</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-gray-200 text-lg max-w-2xl">
             Your dream home awaits in one of Navi Mumbai's most promising residential projects
           </p>
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         {/* Project Overview */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
@@ -163,6 +173,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
+      <LocationSection />
     </div>
   );
 }
