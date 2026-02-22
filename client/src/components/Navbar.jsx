@@ -14,7 +14,6 @@ function Navbar() {
     { path: '/about', label: 'About' },
     { path: '/amenities', label: 'Amenities' },
     { path: '/floor-plans', label: 'Floor Plans' },
-    { path: '/location', label: 'Location' },
     { path: '/gallery', label: 'Gallery' },
   ];
 
