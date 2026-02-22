@@ -7,7 +7,6 @@ import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
 import FloorPlansPage from '../pages/FloorPlansPage';
 import AmenitiesPage from '../pages/AmenitiesPage';
-import LocationPage from '../pages/LocationPage';
 import ContactPage from '../pages/ContactPage';
 import GalleryPage from '../pages/GalleryPage';
 
@@ -22,7 +21,6 @@ function AppRoutes() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/floor-plans" element={<FloorPlansPage />} />
       <Route path="/amenities" element={<AmenitiesPage />} />
-      <Route path="/location" element={<LocationPage />} />
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/contact" element={<ContactPage />} />
       
