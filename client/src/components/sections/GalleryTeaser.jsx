@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
 
 const images = [
-  { src: '/hero/RR_15.jpg',  alt: 'Exterior View' },
-  { src: '/hero/RR_3.jpg',   alt: 'Lobby & Amenities' },
-  { src: '/hero/RR_135.jpg', alt: 'Lifestyle Spaces' },
+  { src: '/RR_15.jpg',  alt: 'Exterior View' },
+  { src: '/RR_3.jpg',   alt: 'Lobby & Amenities' },
+  { src: '/RR_135.jpg', alt: 'Lifestyle Spaces' },
 ];
 
 function GalleryTeaser() {

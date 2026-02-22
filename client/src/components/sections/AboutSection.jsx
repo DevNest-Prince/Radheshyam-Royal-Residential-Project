@@ -29,7 +29,7 @@ function AboutSection() {
           {/* Left – Image */}
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="/hero/RR_15.jpg"
+              src="/RR_15.jpg"
               alt="Radheshyam Royal"
               className="w-full h-full object-cover"
             />
