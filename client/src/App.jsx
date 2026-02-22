@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import AppRoutes from './routes';
+import FloatingContact from './components/FloatingContact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <AppRoutes />
         <Footer />
+        <FloatingContact />
       </div>
     </Router>
   );
