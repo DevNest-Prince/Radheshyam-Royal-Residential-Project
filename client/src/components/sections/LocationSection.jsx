@@ -28,9 +28,9 @@ function LocationSection() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-3">
-            {points.map(({ icon: Icon, text }) => (
+            {points.map(({ icon, text }) => (
               <div key={text} className="flex items-center gap-3 bg-white border border-yellow-100 rounded-xl px-4 py-3 text-sm text-gray-700 hover:border-yellow-300 transition">
-                <Icon className="w-5 h-5 text-yellow-600 shrink-0" />
+                {React.createElement(icon, { className: "w-5 h-5 text-yellow-600 shrink-0" })}
                 <span>{text}</span>
               </div>
             ))}
