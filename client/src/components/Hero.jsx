@@ -49,7 +49,7 @@ function Hero() {
           </div>
         ))}
         {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
       {/* Content Container */}
