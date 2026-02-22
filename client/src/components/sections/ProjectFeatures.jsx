@@ -21,14 +21,14 @@ function ProjectFeatures() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-4">
           {features.map(({ icon, title, sub }) => {
             const Icon = icon;
             return (
-            <div key={title} className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition flex flex-col items-center gap-3 w-40">
-              <Icon className="w-8 h-8 text-yellow-400" />
-              <div className="text-sm font-semibold text-white">{title}</div>
-              <div className="text-xs text-gray-400">{sub}</div>
+            <div key={title} className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6 text-center hover:bg-white/10 transition flex flex-col items-center gap-2 sm:gap-3">
+              <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-yellow-400" />
+              <div className="text-xs sm:text-sm font-semibold text-white">{title}</div>
+              <div className="text-[10px] sm:text-xs text-gray-400">{sub}</div>
             </div>
             );
           })}
