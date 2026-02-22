@@ -32,7 +32,7 @@ function Hero() {
       <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/75" />
 
       {/* Top ribbon */}
-      <div className="absolute top-20 sm:top-24 inset-x-0 flex justify-center px-4">
+      <div className="absolute top-23 sm:top-27 inset-x-0 flex justify-center px-4">
         <div className="flex items-center gap-2 bg-yellow-500/15 border border-yellow-400/30 text-yellow-300 text-[10px] sm:text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full backdrop-blur-sm">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
           OC Received &nbsp;·&nbsp; MAHARERA Approved
