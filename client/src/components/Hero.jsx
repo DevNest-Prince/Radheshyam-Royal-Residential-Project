@@ -2,9 +2,9 @@
 import { Link } from "react-router-dom";
 
 const slides = [
-  { image: "/hero/RR_15.jpg" },
-  { image: "/hero/RR_3.jpg" },
-  { image: "/hero/RR_135.jpg" },
+  { image: "/RR_15.jpg" },
+  { image: "/RR_3.jpg" },
+  { image: "/RR_135.jpg" },
 ];
 
 function Hero() {
