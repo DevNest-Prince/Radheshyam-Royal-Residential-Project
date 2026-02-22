@@ -29,7 +29,7 @@ function Hero() {
       ))}
 
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/75" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/75" />
 
       {/* Top ribbon */}
       <div className="absolute top-24 inset-x-0 flex justify-center">
