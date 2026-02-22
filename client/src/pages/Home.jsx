@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Amenities from '../components/Amenities';
 import FloorPlans from '../components/FloorPlans';
-import Location from '../components/Location';
 import Contact from '../components/Contact';
 
 function Home() {
@@ -13,7 +12,6 @@ function Home() {
       <Features />
       <Amenities />
       <FloorPlans />
-      <Location />
       <Contact />
     </div>
   );
