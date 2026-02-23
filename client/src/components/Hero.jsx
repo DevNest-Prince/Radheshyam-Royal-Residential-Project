@@ -1,5 +1,15 @@
 ﻿import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaCheckCircle, FaHome, FaSubway, FaTrain, FaPlane, FaRoad } from "react-icons/fa";
+
+const highlights = [
+  { icon: FaCheckCircle, text: "MAHARERA Approved" },
+  { icon: FaHome,        text: "OC Received" },
+  { icon: FaSubway,      text: "1 Min Upcoming Metro" },
+  { icon: FaTrain,       text: "12 Min Ghansoli Station" },
+  { icon: FaPlane,       text: "20 Min Airport" },
+  { icon: FaRoad,        text: "Highway Touch Location" },
+];
 
 const slides = [
   { image: "/RR_15.jpg" },
@@ -16,7 +26,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[85vh] overflow-hidden">
+    <section className="relative w-full h-screen min-h-125 max-h-225 overflow-hidden">
 
       {/* Background slides */}
       {slides.map((s, i) => (
@@ -29,59 +39,84 @@ function Hero() {
       ))}
 
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/75" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/75 via-black/55 to-black/70" />
 
-      {/* Top ribbon */}
-      <div className="absolute top-23 sm:top-27 inset-x-0 flex justify-center px-4">
-        <div className="flex items-center gap-2 bg-yellow-500/15 border border-yellow-400/30 text-yellow-300 text-[10px] sm:text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full backdrop-blur-sm">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
+      {/* Centre content — pt-20 clears the fixed 80px navbar */}
+      <div className="relative h-full flex flex-col items-center justify-center text-center px-4 sm:px-8 pt-20">
+
+        {/* Badge */}
+        <div className="flex items-center gap-2 bg-yellow-500/15 border border-yellow-400/30 text-yellow-300 text-[9px] sm:text-[10px] lg:text-xs font-semibold uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm mb-3 sm:mb-4">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
           OC Received &nbsp;·&nbsp; MAHARERA Approved
         </div>
+
+        {/* Location sub-label */}
+        <p className="text-yellow-300 text-[9px] sm:text-xs lg:text-sm uppercase tracking-[0.18em] sm:tracking-[0.25em] font-bold mb-2 sm:mb-3">
+          Navi Mumbai &nbsp;·&nbsp; Kalyan-Shilphata Highway
+        </p>
+
+        {/* Main heading */}
+        <h1 className="font-serif font-bold text-white leading-[1.08]
+          text-[clamp(2rem,8vw,3.5rem)]
+          sm:text-5xl
+          md:text-6xl
+          lg:text-6xl
+          xl:text-7xl
+          2xl:text-8xl
+          mb-3 sm:mb-4 lg:mb-5">
+          Radheshyam<br />
+          <span className="text-yellow-400">Royal</span>
+        </h1>
+
+        {/* Description */}
+        <p className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg max-w-70 sm:max-w-md lg:max-w-lg leading-relaxed mb-5 sm:mb-6 lg:mb-4">
+          Premium 1 &amp; 2 BHK homes in Navi Mumbai — designed for comfort, crafted with quality.
+        </p>
+
+        {/* CTA buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full max-w-65 sm:max-w-none">
+          <Link
+            to="/floor-plans"
+            className="px-6 py-3 sm:px-7 sm:py-3.5 lg:px-8 lg:py-4 bg-yellow-600 hover:bg-yellow-500 active:scale-95 text-white font-semibold rounded-full transition-all shadow-xl text-xs sm:text-sm tracking-wide"
+          >
+            Explore Floor Plans
+          </Link>
+          <Link
+            to="/contact"
+            className="px-6 py-3 sm:px-7 sm:py-3.5 lg:px-8 lg:py-4 bg-white/10 hover:bg-white/20 active:scale-95 border border-white/40 text-white font-semibold rounded-full transition-all text-xs sm:text-sm tracking-wide"
+          >
+            Book a Site Visit
+          </Link>
+        </div>
+
       </div>
 
-      {/* Centre content */}
-      <div className="relative h-[85vh] flex flex-col items-center justify-center text-center px-6">
-          <p className="text-yellow-300 text-[10px] sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold mb-3 sm:mb-5">
-            Navi Mumbai &nbsp;·&nbsp; Kalyan-Shilphata Highway
-          </p>
-
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-4 sm:mb-6">
-            Radheshyam<br />
-            <span className="text-yellow-400">Royal</span>
-          </h1>
-
-          <p className="text-gray-200 text-sm sm:text-lg max-w-xs sm:max-w-lg leading-relaxed mb-7 sm:mb-10">
-            Premium 1 &amp; 2 BHK homes in Navi Mumbai — designed for comfort, crafted with quality.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full max-w-xs sm:max-w-none">
-            <Link
-              to="/floor-plans"
-              className="px-7 py-3.5 sm:px-8 sm:py-4 bg-yellow-600 hover:bg-yellow-500 active:scale-95 text-white font-semibold rounded-full transition-all shadow-xl text-sm tracking-wide"
-            >
-              Explore Floor Plans
-            </Link>
-            <Link
-              to="/contact"
-              className="px-7 py-3.5 sm:px-8 sm:py-4 bg-white/10 hover:bg-white/20 active:scale-95 border border-white/40 text-white font-semibold rounded-full transition-all text-sm tracking-wide"
-            >
-              Book a Site Visit
-            </Link>
-          </div>
-      </div>
-
-      {/* Slide dots */}
-      <div className="absolute bottom-8 inset-x-0 flex justify-center gap-2.5">
+      {/* Slide dots — sit above the highlights strip (~56px tall) */}
+      <div className="absolute bottom-17 sm:bottom-18 inset-x-0 flex justify-center gap-2.5">
         {slides.map((s, i) => (
           <button
             key={s.image}
             onClick={() => setActive(i)}
             aria-label={`Slide ${i + 1}`}
             className={`rounded-full transition-all duration-300 ${
-              i === active ? "w-8 h-2.5 bg-yellow-400" : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
+              i === active ? "w-7 h-2 bg-yellow-400" : "w-2 h-2 bg-white/40 hover:bg-white/70"
             }`}
           />
         ))}
+      </div>
+
+      {/* Highlights strip — pinned to hero bottom */}
+      <div className="absolute bottom-0 inset-x-0 bg-yellow-700 text-white py-3">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-x-5 sm:gap-x-8 gap-y-2">
+            {highlights.map(({ icon: Icon, text }) => (
+              <span key={text} className="flex items-center gap-1.5 text-yellow-100 text-[10px] sm:text-xs lg:text-sm font-medium whitespace-nowrap">
+                {Icon && <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />}
+                {text}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
     </section>
