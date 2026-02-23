@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../components/Hero";
-import HighlightsStrip from "../components/sections/HighlightsStrip";
 import AboutSection from "../components/sections/AboutSection";
 import LocationSection from "../components/sections/LocationSection";
 import ProjectFeatures from "../components/sections/ProjectFeatures";
@@ -10,7 +9,6 @@ function HomePage() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <HighlightsStrip />
       <AboutSection />
       <LocationSection />
       <ProjectFeatures />
