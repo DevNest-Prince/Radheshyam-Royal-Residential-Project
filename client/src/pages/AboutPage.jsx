@@ -13,12 +13,12 @@ function AboutPage() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/55 flex flex-col items-center justify-center text-center px-4">
-          <p className="text-xs uppercase tracking-widest text-yellow-400 font-semibold mb-3">Navi Mumbai</p>
+          <p className="text-xs uppercase tracking-widest text-yellow-400 font-semibold mb-3">Upper Ghansoli</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
             About <span className="text-yellow-400">Radheshyam Royal</span>
           </h1>
           <p className="text-gray-200 text-lg max-w-2xl">
-            Your dream home awaits in one of Navi Mumbai's most promising residential projects
+            Your dream home awaits in one of Upper Ghansoli's most promising residential projects
           </p>
         </div>
       </div>
