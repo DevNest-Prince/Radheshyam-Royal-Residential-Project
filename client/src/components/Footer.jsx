@@ -68,49 +68,42 @@ function Footer() {
         </div>
 
         {/* RERA Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 bg-gray-800/60 border border-yellow-700/30 rounded-2xl px-6 py-5">
-            {/* QR Code */}
-            <div className="shrink-0 flex flex-col items-center gap-2">
-              <div className="bg-white p-2 rounded-xl ring-2 ring-yellow-600/50 shadow-lg shadow-yellow-900/20">
-                <img
-                  src="/RERA-QR-code.jpeg"
-                  alt="MahaRERA QR Code"
-                  className="w-24 h-24 object-contain block"
-                />
-              </div>
-              <p className="text-gray-500 text-xs">Scan to verify</p>
-            </div>
+        <div className="border-t border-gray-800 mt-8 pt-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4 bg-gray-800/50 border border-yellow-700/25 rounded-xl px-5 py-4">
 
-            {/* Divider */}
-            <div className="hidden sm:block w-px h-20 bg-gray-700" />
+            {/* QR */}
+            <a
+              href="https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTE3MDAwMDY5MTcmU2NhbnR5cGU9RXh0ZW5zaW9uQ2VydGlmaWNhdGVRUlNjYW4="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 bg-white p-1.5 rounded-lg ring-2 ring-yellow-600/40 hover:ring-yellow-400 transition"
+            >
+              <img src="/RERA-QR-code.jpeg" alt="MahaRERA QR Code" className="w-24 h-24 object-contain block" />
+            </a>
 
-            {/* Text */}
+            {/* Info */}
             <div className="flex-1 text-center sm:text-left">
-              <div className="inline-flex items-center gap-2 bg-yellow-600/20 border border-yellow-600/40 rounded-full px-3 py-1 mb-3">
+              <div className="flex items-center justify-center sm:justify-start gap-1.5 mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-pulse" />
                 <span className="text-yellow-400 text-xs font-bold uppercase tracking-widest">MahaRERA Registered</span>
               </div>
-              <p className="text-gray-400 text-xs mb-1">RERA Registration Number</p>
-              <p className="text-white font-mono font-bold text-xl tracking-widest">P51700006917</p>
+              <p className="text-white font-mono font-bold text-base tracking-widest">P51700006917</p>
+              <p className="text-gray-500 text-xs mt-0.5">Maharashtra Real Estate Regulatory Authority</p>
             </div>
 
-            {/* Divider */}
-            <div className="hidden sm:block w-px h-20 bg-gray-700" />
+            {/* Button */}
+            <a
+              href="https://maharerait.mahaonline.gov.in/ProjectSummaryView/ProjectSummaryQRCodeView?id=Q2VydGlmaWNhdGVObz1QNTE3MDAwMDY5MTcmU2NhbnR5cGU9RXh0ZW5zaW9uQ2VydGlmaWNhdGVRUlNjYW4="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-1.5 bg-yellow-600 hover:bg-yellow-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition whitespace-nowrap"
+            >
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              View on MahaRERA
+            </a>
 
-            {/* Link */}
-            <div className="text-center sm:text-right">
-              <p className="text-gray-400 text-xs mb-2">Registered with</p>
-              <p className="text-gray-300 text-sm font-medium mb-2">Maharashtra Real Estate<br />Regulatory Authority</p>
-              <a
-                href="https://maharera.maharashtra.gov.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-yellow-500 hover:text-yellow-300 text-xs underline underline-offset-2 transition"
-              >
-                maharera.maharashtra.gov.in
-              </a>
-            </div>
           </div>
         </div>
 
