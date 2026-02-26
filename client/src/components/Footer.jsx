@@ -107,9 +107,15 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-6 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-gray-500 text-xs">
+        <div className="border-t border-gray-800 mt-6 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-gray-500 text-xs">
           <p>&copy; {new Date().getFullYear()} Radheshyam Royal. All rights reserved.</p>
-          <p>MahaRERA Reg. No: <span className="text-gray-300 font-mono">P51700006917</span></p>
+          <div className="flex items-center gap-4">
+            <Link to="/terms" className="hover:text-yellow-400 transition">Terms &amp; Conditions</Link>
+            <span className="text-gray-700">|</span>
+            <Link to="/privacy" className="hover:text-yellow-400 transition">Privacy Policy</Link>
+            <span className="text-gray-700">|</span>
+            <span>MahaRERA: <span className="text-gray-300 font-mono">P51700006917</span></span>
+          </div>
         </div>
       </div>
     </footer>

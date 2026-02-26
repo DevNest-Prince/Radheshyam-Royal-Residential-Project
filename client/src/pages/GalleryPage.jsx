@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 function GalleryPage() {
   const galleryImages = [
@@ -21,6 +22,12 @@ function GalleryPage() {
 
   return (
     <div className="min-h-screen pt-20 bg-gray-50">
+      <SEOHead
+        title="Project Gallery"
+        description="View photos of Radheshyam Royal — building exterior, interiors, amenities, and sample flats. Premium 1 & 2 BHK project in Upper Ghansoli, Navi Mumbai."
+        keywords="Radheshyam Royal gallery, photos flats Upper Ghansoli, sample flat images Navi Mumbai"
+        canonical="/gallery"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-12">

@@ -1,9 +1,16 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 import LocationSection from '../components/sections/LocationSection';
 
 function AboutPage() {
   return (
     <div className="min-h-screen pt-20 bg-white">
+      <SEOHead
+        title="About Radheshyam Royal"
+        description="Learn about Radheshyam Royal — a MahaRERA approved premium residential project on Kalyan-Shilphata Highway, Upper Ghansoli. OC Received. 1 & 2 BHK homes crafted for modern living."
+        keywords="about Radheshyam Royal, MahaRERA approved project Upper Ghansoli, residential project Kalyan Shilphata"
+        canonical="/about"
+      />
 
       {/* Page Hero Banner */}
       <div className="relative h-72 md:h-96 w-full overflow-hidden">

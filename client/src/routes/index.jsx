@@ -9,6 +9,8 @@ import FloorPlansPage from '../pages/FloorPlansPage';
 import AmenitiesPage from '../pages/AmenitiesPage';
 import ContactPage from '../pages/ContactPage';
 import GalleryPage from '../pages/GalleryPage';
+import TermsPage from '../pages/TermsPage';
+import PrivacyPage from '../pages/PrivacyPage';
 
 function AppRoutes() {
   return (
@@ -23,6 +25,8 @@ function AppRoutes() {
       <Route path="/amenities" element={<AmenitiesPage />} />
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/terms" element={<TermsPage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
       
       {/* 404 Page */}
       <Route path="*" element={<NotFoundPage />} />
