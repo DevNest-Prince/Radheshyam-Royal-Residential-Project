@@ -129,6 +129,7 @@ function Contact() {
                     <option>1 BHK - 435 sq.ft</option>
                     <option>2 BHK - 511 sq.ft</option>
                     <option>2 BHK - 562 sq.ft</option>
+                    <option>2 BHK - 699 sq.ft</option>
                     <option>Not Sure Yet</option>
                   </select>
                 </div>
@@ -179,7 +180,7 @@ function Contact() {
                     <p className="text-gray-600">
                       Kalyan-Shilphata Highway<br />
                       12 Min from Ghansoli Station<br />
-                      Navi Mumbai, Maharashtra
+                      Upper Ghansoli, Maharashtra
                     </p>
                   </div>
                 </div>

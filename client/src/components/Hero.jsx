@@ -52,7 +52,7 @@ function Hero() {
 
         {/* Location sub-label */}
         <p className="text-yellow-300 text-[9px] sm:text-xs lg:text-sm uppercase tracking-[0.18em] sm:tracking-[0.25em] font-bold mb-2 sm:mb-3">
-          Navi Mumbai &nbsp;·&nbsp; Kalyan-Shilphata Highway
+          Upper Ghansoli &nbsp;·&nbsp; Kalyan-Shilphata Highway
         </p>
 
         {/* Main heading */}
@@ -70,7 +70,7 @@ function Hero() {
 
         {/* Description */}
         <p className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg max-w-70 sm:max-w-md lg:max-w-lg leading-relaxed mb-5 sm:mb-6 lg:mb-4">
-          Premium 1 &amp; 2 BHK homes in Navi Mumbai — designed for comfort, crafted with quality.
+          Premium 1 &amp; 2 BHK homes in Upper Ghansoli — designed for comfort, crafted with quality.
         </p>
 
         {/* CTA buttons */}

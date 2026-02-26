@@ -22,7 +22,7 @@ function LocationSection() {
               Perfectly <span className="text-yellow-700">Connected</span>
             </h2>
             <p className="text-gray-500 mt-3 leading-relaxed">
-              Situated on Kalyan-Shilphata Highway, Navi Mumbai — offering unmatched connectivity
+              Situated on Kalyan-Shilphata Highway, Upper Ghansoli — offering unmatched connectivity
               to railways, metro, airports and business hubs.
             </p>
           </div>
@@ -44,7 +44,7 @@ function LocationSection() {
         <div className="rounded-2xl overflow-hidden shadow-xl border border-yellow-200 h-96">
           <iframe
             title="Radheshyam Royal Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.460440396423!2d73.07!3d19.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0a9a1673de9%3A0x9631e4b5f3e0d8c2!2sKalyan-Shilphata%20Rd%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.3505!2d73.0483168!3d19.1439639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c137148c6d41%3A0x12c835d31eaf0845!2sRadheshyam%20Royal!5e0!3m2!1sen!2sin!4v1740000000000"
             width="100%"
             height="100%"
             style={{ border: 0 }}

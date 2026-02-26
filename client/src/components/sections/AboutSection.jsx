@@ -15,7 +15,7 @@ const highlights = [
 
 const pricing = [
   { type: '1 BHK', area: '395 – 435 sqft', price: '₹39.99 Lacs*', filled: true },
-  { type: '2 BHK', area: '511 – 562 sqft', price: '₹53.99 Lacs*', filled: false },
+  { type: '2 BHK', area: '511 – 699 sqft', price: '₹53.99 Lacs*', filled: false },
 ];
 
 function AboutSection() {
@@ -46,7 +46,7 @@ function AboutSection() {
 
             <p className="text-gray-600 leading-relaxed">
               Radheshyam Royal is developed by a trusted builder with a strong track record of delivering
-              quality residential projects. Located on the Kalyan-Shilphata Highway, Navi Mumbai, this
+              quality residential projects. Located on the Kalyan-Shilphata Highway, Upper Ghansoli, this
               MAHARERA-approved project offers premium 1 &amp; 2 BHK homes with OC received — move in
               right away.
             </p>
