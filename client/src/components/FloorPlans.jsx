@@ -31,6 +31,13 @@ function FloorPlans() {
       price: 'Price on Request',
       features: ['2 Bedrooms', '2 Bathrooms', 'Spacious Kitchen', 'Large Living Area', 'Balcony'],
       highlight: 'Premium Family Living'
+    },
+    {
+      type: '2 BHK',
+      carpetArea: '699 sq.ft',
+      price: 'Price on Request',
+      features: ['2 Bedrooms', '2 Bathrooms', 'Spacious Kitchen', 'Extra Large Living Area', 'Balcony'],
+      highlight: 'Luxury Spacious Living'
     }
   ];
 
