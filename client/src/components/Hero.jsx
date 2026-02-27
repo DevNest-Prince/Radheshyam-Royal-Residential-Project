@@ -26,7 +26,18 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-125 max-h-225 overflow-hidden">
+    <>
+    {/* ── Mobile: promotional image only ── */}
+    <div className="sm:hidden w-full pt-20">
+      <img
+        src="/Mobile hero image .jpeg"
+        alt="Radheshyam Royal – 1 & 2 BHK Premium Residences, Ready Possession OC Received"
+        className="w-full h-auto object-cover"
+      />
+    </div>
+
+    {/* ── Desktop: full slideshow hero ── */}
+    <section className="hidden sm:block relative w-full h-screen min-h-125 max-h-225 overflow-hidden">
 
       {/* Background slides */}
       {slides.map((s, i) => (
@@ -120,6 +131,7 @@ function Hero() {
       </div>
 
     </section>
+    </>
   );
 }
 
