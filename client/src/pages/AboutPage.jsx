@@ -18,6 +18,9 @@ function AboutPage() {
           src="/RR_15.jpg"
           alt="Radheshyam Royal"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-black/55 flex flex-col items-center justify-center text-center px-4">
           <p className="text-xs uppercase tracking-widest text-yellow-400 font-semibold mb-3">Upper Ghansoli</p>

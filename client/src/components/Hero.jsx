@@ -33,6 +33,9 @@ function Hero() {
         src="/Mobile hero image .jpeg"
         alt="Radheshyam Royal – 1 & 2 BHK Premium Residences, Ready Possession OC Received"
         className="w-full h-auto object-cover"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
       />
     </div>
 
