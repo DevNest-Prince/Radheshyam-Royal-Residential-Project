@@ -1,6 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import LocationSection from '../components/sections/LocationSection';
+import VideoCard from '../components/VideoCard';
 
 function AboutPage() {
   return (
@@ -182,6 +183,34 @@ function AboutPage() {
             </div>
           </div>
         </div>
+        {/* Developer Speaks */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-widest text-amber-600 font-semibold mb-3">A Message For You</p>
+            <h2 className="text-3xl font-bold text-gray-900">
+              Why Families Choose <span className="text-amber-600">Radheshyam Royal</span>
+            </h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto">
+              Hear directly from us — why this is the right home for you and your family
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <VideoCard
+              src="/interview-video/Cover-interview-1.mov"
+              title="Interview - Family & Vision"
+              subtitle="Vision & project overview"
+              thumbnail="/interview-video/thaimbnail1.png"
+            />
+            <VideoCard
+              src="/interview-video/Cover-interview-2.mov"
+              title="Interview — family & amenities"
+              subtitle="Quality, amenities & why Radheshyam Royal"
+              thumbnail="/interview-video/thaimbnail.png"
+            />
+          </div>
+        </div>
+
       </div>
       <LocationSection />
     </div>
