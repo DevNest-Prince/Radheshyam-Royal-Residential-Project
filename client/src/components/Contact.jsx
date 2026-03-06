@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -10,6 +15,8 @@ function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -18,23 +25,40 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        configuration: '1 BHK - 395 sq.ft',
-        message: ''
-      });
-    }, 3000);
+    setSending(true);
+    setError(null);
+
+    const templateParams = {
+      from_name:     formData.name,
+      from_email:    formData.email,
+      from_phone:    formData.phone,
+      configuration: formData.configuration,
+      message:       formData.message || 'No message provided.',
+    };
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      setSubmitted(true);
+
+      // Reset form after 4 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          configuration: '1 BHK - 395 sq.ft',
+          message: ''
+        });
+      }, 4000);
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setError('Something went wrong. Please try again or call us directly.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -149,11 +173,24 @@ function Contact() {
                   ></textarea>
                 </div>
 
+                {error && (
+                  <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded-lg text-sm">
+                    {error}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-linear-to-r from-yellow-700 to-yellow-600 text-white font-semibold py-4 rounded-lg hover:from-yellow-800 hover:to-yellow-700 transition shadow-lg hover:shadow-xl"
+                  disabled={sending}
+                  className="w-full bg-linear-to-r from-yellow-700 to-yellow-600 text-white font-semibold py-4 rounded-lg hover:from-yellow-800 hover:to-yellow-700 transition shadow-lg hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Submit Enquiry
+                  {sending && (
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                    </svg>
+                  )}
+                  {sending ? 'Sending…' : 'Submit Enquiry'}
                 </button>
 
                 <p className="text-sm text-gray-600 text-center">
