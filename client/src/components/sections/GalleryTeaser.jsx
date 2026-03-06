@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
 
+// Replace PASTE_CLOUDINARY_URL_HERE with actual Cloudinary URLs
 const images = [
-  { src: '/RR_15.jpg',  alt: 'Exterior View' },
-  { src: '/RR_3.jpg',   alt: 'Lobby & Amenities' },
-  { src: '/RR_135.jpg', alt: 'Lifestyle Spaces' },
+  { src: 'PASTE_CLOUDINARY_URL_HERE', alt: 'Drone View' },
+  { src: 'PASTE_CLOUDINARY_URL_HERE', alt: 'Interior' },
+  { src: 'PASTE_CLOUDINARY_URL_HERE', alt: 'Building View' },
 ];
 
 function GalleryTeaser() {
@@ -21,11 +22,12 @@ function GalleryTeaser() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((img, i) => (
+          {images.filter(img => img.src !== 'PASTE_CLOUDINARY_URL_HERE').map((img, i) => (
             <div key={img.src} className={`rounded-2xl overflow-hidden ${i === 2 ? 'hidden md:block' : ''}`}>
               <img
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
                 className="w-full h-56 object-cover hover:scale-105 transition duration-500"
               />
             </div>
