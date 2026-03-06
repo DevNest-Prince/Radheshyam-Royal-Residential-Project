@@ -197,16 +197,14 @@ function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <VideoCard
-              src="/interview-video/Cover-interview-1.mov"
+              youtubeId="VtrD0j2Ryps"
               title="Interview - Family & Vision"
               subtitle="Vision & project overview"
-              thumbnail="/interview-video/thaimbnail1.png"
             />
             <VideoCard
-              src="/interview-video/Cover-interview-2.mov"
+              youtubeId="LZqV35VdWSE"
               title="Interview — family & amenities"
               subtitle="Quality, amenities & why Radheshyam Royal"
-              thumbnail="/interview-video/thaimbnail.png"
             />
           </div>
         </div>
