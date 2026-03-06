@@ -23,31 +23,31 @@ const IMAGES = [
   { id: 12, src: 'PASTE_CLOUDINARY_URL_HERE', title: 'Interior 6',     category: 'Interiors' },
 ];
 
-// ─── Local videos (uploaded to /public) ─────────────────────────────────────
+// ─── YouTube Videos ──────────────────────────────────────────────────────────
+// Steps:
+// 1. YouTube pe video upload karo (Unlisted rakh sakte ho)
+// 2. Video URL se 11-char ID copy karo:  youtube.com/watch?v=XXXXXXXXXXX
+// 3. Neeche PASTE_YOUTUBE_ID_HERE ki jagah woh ID paste karo
 const VIDEOS = [
-  { 
-    src: '/sample-flat-videos/Sample flat-1BHK-video.mov', 
+  {
+    youtubeId: 'PASTE_YOUTUBE_ID_HERE', // Sample Flat — 1 BHK Tour
     title: 'Sample Flat — 1 BHK Tour',
     category: 'Sample Flat',
-    thumbnail: '/thumbnails/1bhk-thumb.jpg' // Replace with your thumbnail path
   },
-  { 
-    src: '/sample-flat-videos/Sample Flat-2 BHK-video.mov', 
+  {
+    youtubeId: 'PASTE_YOUTUBE_ID_HERE', // Sample Flat — 2 BHK Tour
     title: 'Sample Flat — 2 BHK Tour',
     category: 'Sample Flat',
-    thumbnail: '/thumbnails/2bhk-thumb.jpg' // Replace with your thumbnail path
   },
-  { 
-    src: '/interview-video/Cover-interview-1.mov',
-    title: 'Developer Interview — Part 1',
+  {
+    youtubeId: 'VtrD0j2Ryps', // Developer Interview — Part 1
+    title: ' interview with Radheshyam Royal - 1',
     category: 'Interview',
-    thumbnail: '/thumbnails/interview-1-thumb.jpg' // Replace with your thumbnail path
   },
-  { 
-    src: '/interview-video/Cover-interview-2.mov',
-    title: 'Developer Interview — Part 2',
+  {
+    youtubeId: 'LZqV35VdWSE', // Developer Interview — Part 2
+    title: 'interview with Radheshyam Royal - 2',
     category: 'Interview',
-    thumbnail: '/thumbnails/interview-2-thumb.jpg' // Replace with your thumbnail path
   },
 ];
 
@@ -62,7 +62,7 @@ function GalleryPage() {
   );
 
   const filteredVideos = VIDEOS.filter(
-    v => selected === 'All' || v.category === selected
+    v => (selected === 'All' || v.category === selected) && v.youtubeId !== 'PASTE_YOUTUBE_ID_HERE'
   );
 
   return (
@@ -142,7 +142,8 @@ function GalleryPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
               {filteredVideos.map((video) => (
                 <VideoCard
-                  key={video.src}
+                  key={video.youtubeId || video.title}
+                  youtubeId={video.youtubeId}
                   src={video.src}
                   title={video.title}
                   subtitle={video.category}

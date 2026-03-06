@@ -1,32 +1,57 @@
 import React, { useState, useRef } from 'react';
 
 /**
- * VideoCard — shows a branded thumbnail with play button overlay.
- * Clicking the overlay starts the video and hides the thumbnail.
+ * VideoCard — supports both YouTube embeds (youtubeId prop) and local/hosted videos (src prop).
+ * Clicking the thumbnail overlay plays the video.
  */
-function VideoCard({ src, title, subtitle, thumbnail }) {
+function VideoCard({ src, youtubeId, title, subtitle, thumbnail }) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
 
   const handlePlay = () => {
     setPlaying(true);
-    // Small delay so the overlay fades before play starts
-    setTimeout(() => {
-      videoRef.current?.play();
-    }, 100);
+    if (!youtubeId) {
+      setTimeout(() => {
+        videoRef.current?.play();
+      }, 100);
+    }
   };
+
+  // YouTube auto-play embed URL
+  const youtubeEmbedUrl = youtubeId
+    ? `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`
+    : null;
+
+  // YouTube thumbnail if no custom thumbnail provided
+  const displayThumbnail = thumbnail
+    ? thumbnail
+    : youtubeId
+    ? `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
+    : null;
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
       <div className="relative aspect-video bg-black">
-        {/* Video element */}
-        <video
-          ref={videoRef}
-          src={src}
-          controls={playing}
-          preload="none"
-          className="w-full h-full object-cover"
-        />
+        {/* YouTube iframe — shown when playing */}
+        {youtubeId && playing ? (
+          <iframe
+            src={youtubeEmbedUrl}
+            title={title}
+            className="w-full h-full"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : !youtubeId ? (
+          /* Local / hosted video element */
+          <video
+            ref={videoRef}
+            src={src}
+            controls={playing}
+            preload="none"
+            className="w-full h-full object-cover"
+          />
+        ) : null}
 
         {/* Thumbnail overlay — hidden once playing */}
         {!playing && (
@@ -34,12 +59,12 @@ function VideoCard({ src, title, subtitle, thumbnail }) {
             className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer group"
             onClick={handlePlay}
             style={{
-              background: thumbnail
-                ? `url(${thumbnail}) center/cover no-repeat`
+              background: displayThumbnail
+                ? `url(${displayThumbnail}) center/cover no-repeat`
                 : 'linear-gradient(135deg, #1a1a2e 0%, #2d1a00 100%)',
             }}
           >
-            {/* Dark overlay for gradient effect over thumbnail */}
+            {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
 
             {/* Branding */}
