@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import VideoCard from '../components/VideoCard';
 
-// ─── Cloudinary base URL ────────────────────────────────────────────────────
-// Format: https://res.cloudinary.com/dkjpkbgxc/image/upload/w_800,q_auto,f_auto/FOLDER/FILENAME
-// Replace PASTE_CLOUDINARY_URL_HERE with the full Cloudinary URL of each image
-
+// gallery images using cloudnary
 const IMAGES = [
   // ── Drone Photos ────────────────────────────────────────────────
   { id: 1,  src: 'PASTE_CLOUDINARY_URL_HERE', title: 'Drone View 1',   category: 'Drone' },
@@ -23,29 +20,26 @@ const IMAGES = [
   { id: 12, src: 'PASTE_CLOUDINARY_URL_HERE', title: 'Interior 6',     category: 'Interiors' },
 ];
 
-// ─── YouTube Videos ──────────────────────────────────────────────────────────
-// Steps:
-// 1. YouTube pe video upload karo (Unlisted rakh sakte ho)
-// 2. Video URL se 11-char ID copy karo:  youtube.com/watch?v=XXXXXXXXXXX
-// 3. Neeche PASTE_YOUTUBE_ID_HERE ki jagah woh ID paste karo
+
+//   youtube.com/watch?v=XXXXXXXXXXX
 const VIDEOS = [
   {
-    youtubeId: 'PASTE_YOUTUBE_ID_HERE', // Sample Flat — 1 BHK Tour
+    youtubeId: 'bE479c_gsSI', // Sample Flat — 1 BHK Tour
     title: 'Sample Flat — 1 BHK Tour',
     category: 'Sample Flat',
   },
   {
-    youtubeId: 'PASTE_YOUTUBE_ID_HERE', // Sample Flat — 2 BHK Tour
+    youtubeId: 'tUdCDfJCvoE', // Sample Flat — 2 BHK Tour
     title: 'Sample Flat — 2 BHK Tour',
     category: 'Sample Flat',
   },
   {
-    youtubeId: 'VtrD0j2Ryps', // Developer Interview — Part 1
+    youtubeId: 'VtrD0j2Ryps', //  Interview — Part 1
     title: ' interview with Radheshyam Royal - 1',
     category: 'Interview',
   },
   {
-    youtubeId: 'LZqV35VdWSE', // Developer Interview — Part 2
+    youtubeId: 'LZqV35VdWSE', //  Interview — Part 2
     title: 'interview with Radheshyam Royal - 2',
     category: 'Interview',
   },
