@@ -30,7 +30,7 @@ function Hero() {
     {/* ── Mobile: promotional image only ── */}
     <div className="sm:hidden w-full pt-20">
       <img
-        src="/Mobile hero image .jpeg"
+        src="/MobileHero2.jpeg"
         alt="Radheshyam Royal – 1 & 2 BHK Premium Residences, Ready Possession OC Received"
         className="w-full h-auto object-cover"
         loading="eager"
