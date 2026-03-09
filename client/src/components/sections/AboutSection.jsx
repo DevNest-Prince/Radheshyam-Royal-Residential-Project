@@ -32,6 +32,8 @@ function AboutSection() {
               src="/RR_15.jpg"
               alt="Radheshyam Royal"
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

@@ -231,8 +231,9 @@ function Contact() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
                     <p className="text-gray-600">
-                      +91 XXXXX XXXXX<br />
-                      +91 XXXXX XXXXX
+                      <a href="tel:+918879984043" className="hover:text-yellow-700 transition">
+                        +91 8879984043
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -308,7 +309,7 @@ function Contact() {
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/918879984043"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-3 w-full bg-green-500 text-white font-semibold py-4 rounded-lg hover:bg-green-600 transition shadow-lg"

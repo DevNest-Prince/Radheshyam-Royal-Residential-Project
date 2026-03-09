@@ -1,36 +1,49 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Import Pages
-import Home from '../pages/Home';
-import HomePage from '../pages/HomePage';
-import AboutPage from '../pages/AboutPage';
-import FloorPlansPage from '../pages/FloorPlansPage';
-import AmenitiesPage from '../pages/AmenitiesPage';
-import ContactPage from '../pages/ContactPage';
-import GalleryPage from '../pages/GalleryPage';
-import TermsPage from '../pages/TermsPage';
-import PrivacyPage from '../pages/PrivacyPage';
+const Home = lazy(() => import('../pages/Home'));
+const HomePage = lazy(() => import('../pages/HomePage'));
+const AboutPage = lazy(() => import('../pages/AboutPage'));
+const FloorPlansPage = lazy(() => import('../pages/FloorPlansPage'));
+const AmenitiesPage = lazy(() => import('../pages/AmenitiesPage'));
+const ContactPage = lazy(() => import('../pages/ContactPage'));
+const GalleryPage = lazy(() => import('../pages/GalleryPage'));
+const TermsPage = lazy(() => import('../pages/TermsPage'));
+const PrivacyPage = lazy(() => import('../pages/PrivacyPage'));
+
+function RouteLoader() {
+  return (
+    <div className="min-h-screen pt-20 bg-white flex items-center justify-center">
+      <div className="flex items-center gap-3 text-yellow-700 font-semibold">
+        <span className="w-3 h-3 rounded-full bg-yellow-600 animate-pulse" />
+        Loading page...
+      </div>
+    </div>
+  );
+}
 
 function AppRoutes() {
   return (
-    <Routes>
-      {/* Single Page Home (All sections) */}
-      <Route path="/home-single" element={<Home />} />
-      
-      {/* Multi-Page Routes */}
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/floor-plans" element={<FloorPlansPage />} />
-      <Route path="/amenities" element={<AmenitiesPage />} />
-      <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/terms" element={<TermsPage />} />
-      <Route path="/privacy" element={<PrivacyPage />} />
-      
-      {/* 404 Page */}
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+    <Suspense fallback={<RouteLoader />}>
+      <Routes>
+        {/* Single Page Home (All sections) */}
+        <Route path="/home-single" element={<Home />} />
+
+        {/* Multi-Page Routes */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/floor-plans" element={<FloorPlansPage />} />
+        <Route path="/amenities" element={<AmenitiesPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+
+        {/* 404 Page */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Suspense>
   );
 }
 
