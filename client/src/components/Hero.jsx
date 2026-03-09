@@ -48,7 +48,14 @@ function Hero() {
           key={s.image}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${i === active ? "opacity-100" : "opacity-0"}`}
         >
-          <img src={s.image} alt="" className="w-full h-full object-cover" />
+          <img
+            src={s.image}
+            alt=""
+            className="w-full h-full object-cover"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchPriority={i === 0 ? 'high' : 'auto'}
+            decoding="async"
+          />
         </div>
       ))}
 

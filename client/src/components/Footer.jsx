@@ -78,7 +78,13 @@ function Footer() {
               rel="noopener noreferrer"
               className="shrink-0 bg-white p-1.5 rounded-lg ring-2 ring-yellow-600/40 hover:ring-yellow-400 transition"
             >
-              <img src="/RERA-QR-code.jpeg" alt="MahaRERA QR Code" className="w-24 h-24 object-contain block" />
+              <img
+                src="/RERA-QR-code.jpeg"
+                alt="MahaRERA QR Code"
+                className="w-24 h-24 object-contain block"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
 
             {/* Info */}
