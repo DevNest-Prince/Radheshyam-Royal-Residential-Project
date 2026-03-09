@@ -1,221 +1,156 @@
-# Radheshyam Royal - Premium Residential Project Website
+# Radheshyam Royal Website
 
-A modern, production-ready real estate website built with React, Vite, Tailwind CSS 4.0, and React Router.
+Production-ready React + Vite website for the Radheshyam Royal residential project.
 
-## 🏠 Project Overview
+## Highlights
 
-**Radheshyam Royal** is a premium residential project featuring:
-- OC Received - Ready to Move
-- MAHARERA Approved
-- Located on Kalyan-Shilphata Highway
-- 12 Minutes from Ghansoli Station
-- 1 Minute from Upcoming Metro Station
-- 2 Towers with G+7 Storey Buildings
+- Modern multi-page project website for real-estate marketing
+- Fast, SEO-friendly frontend built on Vite + React
+- Dedicated pages for about, amenities, floor plans, gallery, and contact
+- Contact enquiry form integrated with EmailJS
+- Mobile-friendly and optimized static asset structure
 
-## 🚀 Features
+## Overview
 
-- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI/UX** - Clean, professional design with smooth animations
-- **SEO Optimized** - Built with best practices for search engine optimization
-- **Fast Performance** - Utilizes Vite for lightning-fast builds and hot reload
-- **Production Ready** - Optimized and ready for deployment
+This project is a multi-page marketing website with:
 
-## 📦 Tech Stack
+- Project details and highlights
+- Amenities and floor-plan presentation
+- Gallery and video sections
+- Contact form integrated with EmailJS
+- SEO-ready page metadata
 
-- **React 19.2.0** - Latest React version with concurrent features
-- **Vite 7.3.1** - Next generation frontend tooling
-- **Tailwind CSS 4.2.0** - Utility-first CSS framework
-- **React Router Dom 7.13.0** - Declarative routing for React
+## Screenshots
 
-## 🛠️ Installation & Setup
+### Hero / Campaign Banner
+
+![Hero Banner](public/RR_135.jpg)
+
+### Main Building View
+
+![Main Building](public/RR_3.jpg)
+
+### Exterior Perspective
+
+![Project Exterior](public/RR_15.jpg)
+
+### Sample Floor Plan
+
+![Floor Plan Sample](public/flat-layout/395.png)
+
+## Tech Stack
+
+- React 19
+- Vite 7
+- Tailwind CSS 4
+- React Router 7
+- EmailJS Browser SDK
+
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
 
-### Installation Steps
+- Node.js 18+
+- npm 9+
 
-1. **Navigate to the project**
-   ```bash
-   cd client
-   ```
+### Install
 
-2. **Install dependencies** (Already done)
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser**
-   - Navigate to: `http://localhost:5173` (or the port shown in terminal)
-
-## 📝 Available Scripts
-
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build production-ready optimized bundle
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint to check code quality
-
-## 📂 Project Structure
-
-```
-client/
-├── src/
-│   ├── components/         # Reusable UI components
-│   │   ├── Navbar.jsx     # Navigation bar with page routing
-│   │   ├── Hero.jsx       # Landing section with key highlights
-│   │   ├── Features.jsx   # Project features and connectivity
-│   │   ├── Amenities.jsx  # World-class amenities section
-│   │   ├── FloorPlans.jsx # Interactive floor plan selector
-│   │   ├── Location.jsx   # Location advantages and map
-│   │   ├── Contact.jsx    # Contact form and information
-│   │   ├── Footer.jsx     # Footer with links and social media
-│   │   └── ScrollToTop.jsx # Scroll to top on route change
-│   ├── pages/              # Page components
-│   │   ├── Home.jsx       # All sections in single page
-│   │   ├── HomePage.jsx   # Landing/Hero only
-│   │   ├── AboutPage.jsx  # About the project
-│   │   ├── FloorPlansPage.jsx  # Floor plans details
-│   │   ├── AmenitiesPage.jsx   # Features & amenities
-│   │   ├── LocationPage.jsx    # Location details
-│   │   ├── GalleryPage.jsx     # Image gallery
-│   │   └── ContactPage.jsx     # Contact form
-│   ├── routes/
-│   │   └── index.jsx      # Centralized routing configuration
-│   ├── App.jsx            # Main app component
-│   ├── App.css            # Custom styles
-│   ├── index.css          # Tailwind imports
-│   └── main.jsx           # Application entry point
-├── public/                # Static assets
-├── index.html             # HTML template
-├── package.json           # Dependencies and scripts
-└── vite.config.js         # Vite configuration
+```bash
+cd client
+npm install
 ```
 
-## 🌐 Pages Overview
+### Run Development Server
 
-### 1. **Home Page** (`/`)
-- Hero section with key highlights
-- Call-to-action buttons
-- Starting price display
+```bash
+npm run dev
+```
 
-### 2. **About Page** (`/about`)
-- Project vision and overview
-- Key highlights and statistics
-- Why choose Radheshyam Royal
-
-### 3. **Amenities Page** (`/amenities`)
-- Project features and connectivity
-- World-class amenities with icons
-- 20+ premium facilities
-
-### 4. **Floor Plans Page** (`/floor-plans`)
-### 4. **Floor Plans Page** (`/floor-plans`)
-- Interactive configuration selector
-- 1 BHK & 2 BHK options with pricing
-- Detailed features and specifications
-- Quick comparison table
-
-### 5. **Location Page** (`/location`)
-- Strategic location details
-- Nearby facilities (schools, hospitals, malls)
-- Transportation access
-- Map integration
-
-### 6. **Gallery Page** (`/gallery`)
-- Project image gallery
-- Category-wise filtering
-- Exterior, interior, and amenity photos
-
-### 7. **Contact Page** (`/contact`)
-- Enquiry form with validation
-- Contact information and office hours
-- WhatsApp integration
-- Social media links
-
-## 🛣️ Routing Structure
-
-The application uses **centralized routing** configuration:
-- Routes are defined in `src/routes/index.jsx`
-- Easy to maintain and extend
-- Includes 404 Not Found page
-- Automatic scroll to top on route change
-
-## 🌐 Deployment
-
-### Build for Production
+### Build Production Bundle
 
 ```bash
 npm run build
 ```
 
-This creates an optimized production build in the `dist/` folder.
+### Preview Production Build
 
-### Deployment Options
+```bash
+npm run preview
+```
 
-1. **Vercel** (Recommended)
-   ```bash
-   npm i -g vercel
-   vercel
-   ```
+### Lint
 
-2. **Netlify**
-   - Drag and drop the `dist` folder to Netlify
+```bash
+npm run lint
+```
 
-3. **GitHub Pages**
-   - Push to GitHub and enable GitHub Pages from settings
+## Environment Variables
 
-4. **Traditional Hosting**
-   - Upload contents of `dist/` folder to your web server
+The contact form in `src/components/Contact.jsx` requires EmailJS values in `.env`:
 
-## ⚙️ Customization
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-### Update Contact Information
+Without these values, the form cannot send enquiries.
 
-Edit these files to update contact details:
-- `src/components/Footer.jsx` - Phone, email, address
-- `src/components/Contact.jsx` - Contact info and WhatsApp link
+## Routes
 
-### Add Real Images
+Routes are defined in `src/routes/index.jsx`.
 
-Replace placeholder sections in:
-- Hero section
-- Floor plans visualizations
-- Location map
+- `/` -> Home page
+- `/about` -> About page
+- `/amenities` -> Amenities page
+- `/floor-plans` -> Floor plans page
+- `/gallery` -> Gallery page
+- `/contact` -> Contact page
+- `/terms` -> Terms page
+- `/privacy` -> Privacy page
+- `/home-single` -> Single-page variant
+- `*` -> 404 page
 
-### Customize Colors
+## Project Structure
 
-To change the primary color scheme:
-- Replace `amber-600` with your preferred color
-- Replace `orange-600` for gradient combinations
+```text
+client/
+  public/
+    flat-layout/
+    interview-video/
+    sample-flat-videos/
+    Logo.jpeg
+    RERA-QR-code.jpeg
+    robots.txt
+    sitemap.xml
+  src/
+    components/
+    pages/
+    routes/
+    App.jsx
+    main.jsx
+  index.html
+  package.json
+  vite.config.js
+```
 
-## 📱 Responsive Design
+## Asset Notes
 
-Fully optimized for:
-- Desktop (1920px+)
-- Laptop (1024px - 1919px)
-- Tablet (768px - 1023px)
-- Mobile (320px - 767px)
+- Navbar logo currently references `public/Logo.jpeg`.
+- Floor-plan visuals are expected in `public/flat-layout/`.
+- Video-related media is expected in `public/interview-video/` and `public/sample-flat-videos/`.
 
-## 🎯 Next Steps
+## Deployment
 
-1. **Add Real Content**: Replace placeholder text and images with actual project photos
-2. **Connect Backend**: Set up a backend API for form submissions
-3. **SEO Optimization**: Add meta tags, sitemap, and structured data
-4. **Analytics**: Integrate Google Analytics
-5. **Gallery Section**: Add image gallery
-6. **Virtual Tour**: Add 360° virtual tour
-7. **Testimonials**: Add customer reviews section
+This project includes `vercel.json` and can be deployed on Vercel directly.
 
-## 📞 Contact
+Generic static deployment flow:
 
-- Email: info@radheshyamroyal.com
-- Phone: +91 XXXXX XXXXX
+1. Run `npm run build`
+2. Deploy the generated `dist/` folder
 
----
+## Contact
 
-**Built with ❤️ for Radheshyam Royal**
+- Website: `https://your-domain.example`
+- Phone: `+91 XXXXX XXXXX`
+- Email: `contact@example.com`
