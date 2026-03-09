@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function FloorPlans() {
   const [selectedPlan, setSelectedPlan] = useState(0);
+  const brochurePdfPath = '/flat-layout/Radheshyam Royale Brochure.pdf';
 
   const plans = [
     {
@@ -9,35 +10,40 @@ function FloorPlans() {
       carpetArea: '395 sq.ft',
       price: '₹39.99 Lacs*',
       features: ['1 Bedroom', '1 Bathroom', 'Kitchen', 'Living Area', 'Balcony'],
-      highlight: 'Best for Young Professionals'
+      highlight: 'Best for Young Professionals',
+      image: '/flat-layout/395.png'
     },
     {
       type: '1 BHK',
       carpetArea: '435 sq.ft',
       price: '₹44.99 Lacs*',
       features: ['1 Bedroom', '1 Bathroom', 'Spacious Kitchen', 'Living Area', 'Balcony'],
-      highlight: 'Perfect for Small Families'
+      highlight: 'Perfect for Small Families',
+      image: '/flat-layout/435.png'
     },
     {
       type: '2 BHK',
       carpetArea: '511 sq.ft',
       price: '₹53.99 Lacs*',
       features: ['2 Bedrooms', '2 Bathrooms', 'Kitchen', 'Living Area', 'Balcony'],
-      highlight: 'Ideal for Growing Families'
+      highlight: 'Ideal for Growing Families',
+      image: '/flat-layout/511.png'
     },
     {
       type: '2 BHK',
       carpetArea: '562 sq.ft',
       price: 'Price on Request',
       features: ['2 Bedrooms', '2 Bathrooms', 'Spacious Kitchen', 'Large Living Area', 'Balcony'],
-      highlight: 'Premium Family Living'
+      highlight: 'Premium Family Living',
+      image: '/flat-layout/562.png'
     },
     {
       type: '2 BHK',
       carpetArea: '699 sq.ft',
       price: 'Price on Request',
       features: ['2 Bedrooms', '2 Bathrooms', 'Spacious Kitchen', 'Extra Large Living Area', 'Balcony'],
-      highlight: 'Luxury Spacious Living'
+      highlight: 'Luxury Spacious Living',
+      image: '/flat-layout/699.png'
     }
   ];
 
@@ -77,20 +83,12 @@ function FloorPlans() {
           <div className="order-2 lg:order-1">
             <div className="bg-linear-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 shadow-xl">
               <div className="aspect-square bg-white rounded-xl flex items-center justify-center p-8 shadow-inner">
-                {/* Floor plan placeholder */}
-                <div className="w-full h-full border-4 border-dashed border-yellow-300 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-24 h-24 mx-auto text-yellow-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                    <p className="text-gray-500 font-medium">
-                      {plans[selectedPlan].type} Layout
-                    </p>
-                    <p className="text-sm text-gray-400 mt-2">
-                      Floor plan illustration
-                    </p>
-                  </div>
-                </div>
+                <img
+                  src={plans[selectedPlan].image}
+                  alt={`${plans[selectedPlan].type} floor plan - ${plans[selectedPlan].carpetArea}`}
+                  className="w-full h-full object-contain rounded-lg"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -146,18 +144,15 @@ function FloorPlans() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="pt-4">
               <a 
-                href="#contact" 
-                className="flex-1 text-center px-6 py-4 bg-yellow-700 text-white font-semibold rounded-lg hover:bg-yellow-800 transition shadow-lg"
+                href={brochurePdfPath}
+                download="Radheshyam-Royal-Brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center px-6 py-4 bg-yellow-700 text-white font-semibold rounded-lg hover:bg-yellow-800 transition shadow-lg"
               >
                 Download Brochure
-              </a>
-              <a 
-                href="#contact" 
-                className="flex-1 text-center px-6 py-4 bg-white text-yellow-700 font-semibold rounded-lg border-2 border-yellow-700 hover:bg-yellow-50 transition"
-              >
-                Get Price Details
               </a>
             </div>
           </div>

@@ -1,44 +1,54 @@
 import React from 'react';
+import {
+  FaLeaf,
+  FaChild,
+  FaUsers,
+  FaPlaceOfWorship,
+  FaSpa,
+  FaGamepad,
+  FaShieldAlt,
+  FaWind
+} from 'react-icons/fa';
 
 function Amenities() {
   const amenities = [
     {
-      icon: '☘️',
+      icon: FaLeaf,
       title: 'Beautiful Landscape Garden',
       description: 'Lush green spaces for relaxation'
     },
     {
-      icon: '🛝',
+      icon: FaChild,
       title: "Children's Play Area",
       description: 'Safe and fun play zone for kids'
     },
     {
-      icon: '👨‍🦯',
+      icon: FaUsers,
       title: "Senior Citizen's Haven",
       description: 'Dedicated space for elderly residents'
     },
     {
-      icon: '🛕',
+      icon: FaPlaceOfWorship,
       title: 'Sai Baba Temple',
       description: 'Spiritual space within premises'
     },
     {
-      icon: '🧘‍♀️',
+      icon: FaSpa,
       title: 'Yoga Space',
       description: 'Dedicated area for yoga and meditation'
     },
     {
-      icon: '🤩',
+      icon: FaGamepad,
       title: 'Recreational Area',
       description: 'Entertainment and leisure facilities'
     },
     {
-      icon: '👮‍♂️',
+      icon: FaShieldAlt,
       title: 'Security Cabin',
       description: 'Round-the-clock security personnel'
     },
     {
-      icon: '🌬️',
+      icon: FaWind,
       title: 'Natural Ventilation',
       description: 'Well-designed cross ventilation'
     }
@@ -59,13 +69,16 @@ function Amenities() {
 
         {/* Amenities Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {amenities.map((amenity, index) => (
-            <div 
+          {amenities.map((amenity, index) => {
+            const Icon = amenity.icon;
+            return (
+            <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-yellow-200 hover:border-yellow-400 text-center group"
+              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-yellow-100 hover:border-yellow-400 text-center group relative overflow-hidden"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {amenity.icon}
+              <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-yellow-600 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-yellow-50 border border-yellow-200 flex items-center justify-center group-hover:bg-yellow-100 transition-colors duration-300">
+                <Icon className="w-8 h-8 text-yellow-700 group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {amenity.title}
@@ -74,7 +87,8 @@ function Amenities() {
                 {amenity.description}
               </p>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Additional Highlights */}
@@ -112,7 +126,7 @@ function Amenities() {
                   20+ Amenities
                 </div>
                 <a 
-                  href="#contact" 
+                  href="/contact" 
                   className="inline-flex items-center text-white hover:text-yellow-100 transition font-semibold"
                 >
                   Schedule a Visit
